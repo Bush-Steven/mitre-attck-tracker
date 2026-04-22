@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Attack</title>
+</head>
+<body>
+
+<h1>Add MITRE Attack</h1>
+
+<form method="POST">
+
+Title:<br>
+<input type="text" name="title" required><br><br>
+
+Technique ID:<br>
+<input type="text" name="technique_id" placeholder="T1566"><br><br>
+
+Tactic:<br>
+<select name="tactic">
+    <option>Initial Access</option>
+    <option>Execution</option>
+    <option>Persistence</option>
+    <option>Privilege Escalation</option>
+</select><br><br>
+
+Severity:<br>
+<select name="severity">
+    <option>Low</option>
+    <option>Medium</option>
+    <option>High</option>
+</select><br><br>
+
+Description:<br>
+<textarea name="description"></textarea><br><br>
+
+<button type="submit">Save</button>
+
+</form>
+
+</body>
+</html>

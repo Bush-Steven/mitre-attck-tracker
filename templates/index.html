@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MITRE Tracker</title>
+</head>
+<body>
+
+<h1>MITRE ATT&CK Tracker</h1>
+
+<a href="/add">➕ Add Attack</a> |
+<a href="/dashboard">📊 Dashboard</a>
+
+<hr>
+
+<h2>All Recorded Attacks</h2>
+
+{% for a in attacks %}
+<div style="border:1px solid black; margin:10px; padding:10px;">
+    <h3>{{ a.title }}</h3>
+    <p><b>Technique:</b> {{ a.technique_id }}</p>
+    <p><b>Tactic:</b> {{ a.tactic }}</p>
+    <p><b>Severity:</b> {{ a.severity }}</p>
+    <p>{{ a.description }}</p>
+</div>
+{% endfor %}
+
+</body>
+</html>
